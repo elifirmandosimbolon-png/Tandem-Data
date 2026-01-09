@@ -15,12 +15,16 @@ jobs:
 
       - name: Send JSON Data to First URL
         run: |
-          curl --fail-with-body -X POST "https://:_ZDXLrr9TvekFJFzUbktjA@eu.tandem.autodesk.com/api/v1/timeseries/models/urn:adsk.dtm:4TYXEm1qQvKfROWfpiTp2A/streams/AQAAAA8vgv4DQkbEh2UTQy75eu8AAAAA" \
+          curl --fail-with-body -X POST \
+            "https://eu.tandem.autodesk.com/api/v1/timeseries/models/urn:adsk.dtm:4TYXEm1qQvKfROWfpiTp2A/streams/AQAAAA8vgv4DQkbEh2UTQy75eu8AAAAA" \
+            -H "Authorization: Bearer ${{ secrets.TANDEM_TOKEN_1 }}" \
             -H "Content-Type: application/json" \
             --data-binary @stream.json
 
       - name: Send JSON Data to Second URL
         run: |
-          curl --fail-with-body -X POST "https://:bgztJVoAQPyURC3gir7dKA@eu.tandem.autodesk.com/api/v1/timeseries/models/urn:adsk.dtm:4TYXEm1qQvKfROWfpiTp2A/streams/AQAAAIjYk-SAsUYPtArVLIMt5GEAAAAA" \
+          curl --fail-with-body -X POST \
+            "https://eu.tandem.autodesk.com/api/v1/timeseries/models/urn:adsk.dtm:4TYXEm1qQvKfROWfpiTp2A/streams/AQAAAIjYk-SAsUYPtArVLIMt5GEAAAAA" \
+            -H "Authorization: Bearer ${{ secrets.TANDEM_TOKEN_2 }}" \
             -H "Content-Type: application/json" \
             --data-binary @stream.json
