@@ -14,7 +14,7 @@ steps:
   
   - name: Send JSON Data to First URL 
     run: | 
-    curl -X POST "https://:_ZDXLrr9TvekFJFzUbktjA@eu.tandem.autodesk.com/api/v1/timeseries/models/urn:adsk.dtm:4TYXEm1qQvKfROWfpiTp2A/streams/AQAAAA8vgv4DQkbEh2UTQy75eu8AAAAA"\ 
+   curl -X POST "https://:_ZDXLrr9TvekFJFzUbktjA@eu.tandem.autodesk.com/api/v1/timeseries/models/urn:adsk.dtm:4TYXEm1qQvKfROWfpiTp2A/streams/AQAAAA8vgv4DQkbEh2UTQy75eu8AAAAA"\
     -H "Content-Type: application/json"\ 
     -d @stream.json 
     - name: Send JSON Data to Second URL 
@@ -22,4 +22,4 @@ steps:
     curl -X POST "https://:bgztJVoAQPyURC3gir7dKA@eu.tandem.autodesk.com/api/v1/timeseries/models/urn:adsk.dtm:4TYXEm1qQvKfROWfpiTp2A/streams/AQAAAIjYk-SAsUYPtArVLIMt5GEAAAAA"\ 
           -H "Content-Type: application/json"\ 
           -d @stream.json
-          
+      
